@@ -32,7 +32,6 @@ isComplete = False
 
 while not isComplete:
     # find add to cart button
-    print("Looking for 'Add to Cart' button...")
     try:
         atcBtn = WebDriverWait(driver, 6).until(
             EC.element_to_be_clickable((By.CSS_SELECTOR, ".add-to-cart-button"))
