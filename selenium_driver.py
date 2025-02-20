@@ -11,6 +11,7 @@ class SeleniumDriver(object):
         self,
     ):
         self.driver = uc.Chrome(headless=False)
+        self.driver.maximize_window()
     def close_all(self):
         # close all open tabs
         if len(self.driver.window_handles) < 1:

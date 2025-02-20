@@ -33,7 +33,7 @@ isComplete = False
 while not isComplete:
     # find add to cart button
     try:
-        atcBtn = WebDriverWait(driver, 6).until(
+        atcBtn = WebDriverWait(driver, 5).until(
             EC.element_to_be_clickable((By.CSS_SELECTOR, ".add-to-cart-button"))
         )
     except:
@@ -64,14 +64,10 @@ while not isComplete:
         )
         dropdown = Select(dropdownElement)
         
-        dropdown.select_by_visible_text('1')
-
-        # Wait for page reload when changing quantity
-        time.sleep(3)
-        
         if dropdown.first_selected_option.text != '1':
-            print(dropdown.first_selected_option)
-            raise ValueError("The quantity is not 1")
+            dropdown.select_by_visible_text('1')
+            # Wait for page reload when changing quantity
+            time.sleep(3)
         
         print("Successfully added to cart - beginning check out")
 
