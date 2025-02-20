@@ -21,7 +21,7 @@ def notify() :
 
 selenium_object = SeleniumDriver()
 selenium_object.login(info.email, info.password)
-
+print("Sign in successful!")
 driver = selenium_object.driver
 driver.get(info.RTXLINK1)
 
@@ -30,6 +30,7 @@ isComplete = False
 # notify()
 # input("Press Enter to continue...")
 
+print("Looking for clickable Add to Cart button...")
 while not isComplete:
     # find add to cart button
     try:

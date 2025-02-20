@@ -58,7 +58,7 @@ class SeleniumDriver(object):
             EC.presence_of_element_located((By.XPATH, "/html/body/div[1]/div/section/main/div[2]/div/div/div[1]/div/div/div/div/div/form/div[3]/button[1]"))
         )
         signInBtn.click()
-        print("Signing in")
+        print("Signing in...")
 
         # waiting to return to homepage
         WebDriverWait(self.driver, 10).until(
