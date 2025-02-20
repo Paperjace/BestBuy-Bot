@@ -1,12 +1,14 @@
 # RTX Best Buy Bot
 
 ## Features
+- Automatically logs into Best Buy account
 - Refreshes link until "Add to Cart" button is available
 - Automate entire checkout process
 
 ## Prerequisites
 - Sign up for a Best Buy account
 - Add all billing/shipping info to your account (must only have one card on the account)
+- Download and install [Python](https://www.python.org/)
 
 ## Dependencies
 - Selenium
